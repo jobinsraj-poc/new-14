@@ -1,0 +1,12 @@
+# Define protected branches (replace "pattern" with your branch name or pattern)
+protected_branches:
+  - pattern: "master" # Branch name or pattern (e.g., main, feature/*)
+    # Enforce specific requirements
+    # Replace 'true' or 'false' with your desired settings
+    requires_approvals:
+      enabled: true
+      minimum_approvals: 1
+    # Enforce status checks (replace 'context-name' with your check name)
+    required_status_checks:
+      - context-name: "context-name"
+        strict: true
